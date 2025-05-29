@@ -1,9 +1,3 @@
-Absolutely! Here’s a **professional, clear, and action-oriented `README.md`** for your Qwiki Management System Handbook Github repo—designed for both technical and non-technical users.
-Feel free to copy, edit, or request a more branded version.
-
----
-
-````markdown
 # Qwiki Management System Handbook
 
 > **A modular knowledge management system for structured FAQs, conversational journeys, and dialogue flows—built for brands, AI assistants, and customer experience teams.**
@@ -12,8 +6,8 @@ Feel free to copy, edit, or request a more branded version.
 
 ## What is a Qwiki?
 
-A **Qwiki** is a modular, structured knowledge asset—such as an FAQ, step-by-step customer journey, or dialogue flow—designed to be both human-readable and machine-readable.  
-Qwikis make it easy for brands and teams to deliver consistent, compliant, and helpful answers across websites, AI assistants, chatbots, and search engines.
+A **Qwiki** is a modular, structured knowledge asset such as an FAQ, step-by-step customer journey, or dialogue flow—designed to be both human-readable and machine-readable.  
+Qwikis make it easy for brands and teams to deliver consistent, compliant, and helpful answers across websites, AI assistants, chatbots, search and answer engines.
 
 ---
 
