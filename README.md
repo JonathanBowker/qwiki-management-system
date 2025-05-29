@@ -142,7 +142,7 @@ This handbook covers:
 
 ---
 
-## 👥 Who is this for?
+## Who is this for?
 
 * **Brand managers and CX teams:** Maintain consistent, on-brand knowledge everywhere.
 * **AI & data teams:** Power LLMs, RAG, search, and chatbots with structured, trusted sources.
