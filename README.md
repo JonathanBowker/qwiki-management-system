@@ -59,7 +59,10 @@ This handbook covers:
 
 ```json
 {
-  "@context": ["https://schema.org/", "https://brandoschema.com/context.jsonld"],
+  "@context": [
+    "https://schema.org/",
+    "https://brandoschema.com/context.jsonld"
+  ],
   "@type": "QwikiDialogueFlow",
   "id": "QW-001",
   "name": "School Shoe Purchase Journey – Young Mum",
@@ -67,20 +70,74 @@ This handbook covers:
     "role": "Customer",
     "profile": "Young mum, time-pressed, values comfort, price, and durability for her 7-year-old son"
   },
+  "description": "A conversational journey for a parent buying school shoes online, covering discovery, fit, checkout, and support.",
   "steps": [
     {
       "stepId": "QW-001-001",
+      "order": 1,
       "userUtterance": "What’s the best place to buy school shoes online?",
-      "agentResponse": "We recommend Clarks, Schuh, and John Lewis. Are you looking for a specific size or style?"
+      "agentResponse": "We recommend Clarks, Schuh, and John Lewis. Are you looking for a specific size or style?",
+      "parameters": [],
+      "escalation": false
     },
     {
       "stepId": "QW-001-002",
+      "order": 2,
       "userUtterance": "He’s 7, size 2.5 in black.",
-      "agentResponse": "Classic black, UK size 2.5, is available. Want to know about free returns or see parent reviews?"
+      "agentResponse": "Classic black, UK size 2.5, is available at both Clarks and John Lewis. Would you like to see sizing guides, read parent reviews, or go straight to checkout?",
+      "parameters": [
+        {"name": "shoeSize", "value": "2.5", "entityType": "Size"},
+        {"name": "color", "value": "black", "entityType": "Color"}
+      ],
+      "escalation": false
+    },
+    {
+      "stepId": "QW-001-003",
+      "order": 3,
+      "userUtterance": "Show me reviews.",
+      "agentResponse": "Here are parent reviews for Clarks’ black school shoes in size 2.5: ⭐⭐⭐⭐⭐ ‘Very durable!’ Would you like to proceed to purchase or ask about returns?",
+      "parameters": [],
+      "escalation": false
+    },
+    {
+      "stepId": "QW-001-004",
+      "order": 4,
+      "userUtterance": "What is your returns policy?",
+      "agentResponse": "You can return any unworn school shoes within 30 days for a full refund. Would you like to add these to your basket?",
+      "parameters": [],
+      "escalation": false
+    },
+    {
+      "stepId": "QW-001-005",
+      "order": 5,
+      "userUtterance": "Yes, add to basket.",
+      "agentResponse": "Done! Would you like to check out now or continue shopping?",
+      "parameters": [],
+      "escalation": false
+    },
+    {
+      "stepId": "QW-001-006",
+      "order": 6,
+      "userUtterance": "I have a question about shoe width.",
+      "agentResponse": "Of course! Are you looking for a standard or wide fit? I can show available options or connect you to a fitting specialist.",
+      "parameters": [
+        {"name": "fit", "entityType": "Fit", "prompt": "Standard or wide fit?"}
+      ],
+      "escalation": false
+    },
+    {
+      "stepId": "QW-001-007",
+      "order": 7,
+      "userUtterance": "Can I talk to a human?",
+      "agentResponse": "No problem—connecting you to a customer support specialist now.",
+      "parameters": [],
+      "escalation": true
     }
-    // more steps...
-  ]
+  ],
+  "escalationPolicy": "If the customer requests help or seems confused, escalate to a human agent for support.",
+  "feedbackPrompt": "Did you find this school shoe shopping journey easy and helpful? Please rate your experience."
 }
+
 ```
 
 ---
